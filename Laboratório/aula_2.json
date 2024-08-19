@@ -1,0 +1,22 @@
+{
+
+    "Professor" : "Marcelo",
+    "Assunto" : "C209",
+    "Alunos" : [
+        {
+            "Nome" : "Lucas"
+        },
+        {
+
+            "Nome" : "Fabricio"
+        },
+        {
+                
+            "Nome" : "Álvaro"
+        },
+        {
+            "Nome" : "Leo"       
+                      
+        }
+    ]
+}
