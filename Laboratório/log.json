@@ -1,0 +1,5 @@
+{"timestamp": "2024-08-26T12:44:27.747209", "action": "add_new_pokemon", "details": {"pokemon": {"id": 4, "name": "Charmander", "type": "Fire"}}}
+{"timestamp": "2024-08-26T12:44:27.748206", "action": "show_all_pokemon", "details": {"result_count": 4}}
+{"timestamp": "2024-08-26T12:44:27.748206", "action": "find_pokemon_by_id", "details": {"pokemon_id": 1, "found": true}}
+{"timestamp": "2024-08-26T12:44:27.748206", "action": "find_pokemon_by_name", "details": {"name": "Ivysaur", "found": true}}
+{"timestamp": "2024-08-26T12:44:27.749204", "action": "find_pokemon_by_type", "details": {"type": "Fire", "result_count": 1}}
