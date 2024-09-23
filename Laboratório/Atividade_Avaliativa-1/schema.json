@@ -1,0 +1,52 @@
+{
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": ["nome", "nota", "corridas"],
+      "properties": {
+        "nome": {
+          "bsonType": "string",
+          "description": "O nome do motorista é obrigatório e deve ser uma string"
+        },
+        "nota": {
+          "bsonType": "double",
+          "description": "A nota do motorista deve ser um número decimal"
+        },
+        "corridas": {
+          "bsonType": "array",
+          "items": {
+            "bsonType": "object",
+            "required": ["nota", "distancia", "valor", "passageiro"],
+            "properties": {
+              "nota": {
+                "bsonType": "int",
+                "description": "Nota da corrida"
+              },
+              "distancia": {
+                "bsonType": "double",
+                "description": "Distância da corrida"
+              },
+              "valor": {
+                "bsonType": "double",
+                "description": "Valor da corrida"
+              },
+              "passageiro": {
+                "bsonType": "object",
+                "required": ["nome", "documento"],
+                "properties": {
+                  "nome": {
+                    "bsonType": "string",
+                    "description": "Nome do passageiro"
+                  },
+                  "documento": {
+                    "bsonType": "string",
+                    "description": "Documento do passageiro"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

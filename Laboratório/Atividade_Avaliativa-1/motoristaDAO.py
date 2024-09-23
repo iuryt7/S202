@@ -9,12 +9,12 @@ class MotoristaCLI:
         while True:
             comando = input("Digite um comando: ")
             if comando == "sair":
-                print("Adeus!")
+                print("Saindo.")
                 break
             elif comando in self.comandos:
                 self.comandos[comando]()
             else:
-                print("Comando inválido. Tente novamente.")
+                print("Comando inválido, tente novamente.")
 
 
 class MotoristaDAO(MotoristaCLI):
@@ -27,11 +27,10 @@ class MotoristaDAO(MotoristaCLI):
         self.adicionar_comando("deletar", self.deletar_motorista)
 
     def criar_corrida(self):
-        # Coleta informações da corrida
         nota_corrida = int(input("Nota da corrida: "))
-        distancia_corrida = float(input("Distância da corrida (em km): "))
-        valor_corrida = float(input("Valor da corrida (em R$): "))
-        nome_passageiro = input("Nome do passageiro: ")
+        distancia_corrida = float(input("Distância da corrida - KM: "))
+        valor_corrida = float(input("Valor da corrida - R$): "))
+        nome_passageiro = input("Passageiro: ")
         documento_passageiro = input("Documento do passageiro: ")
 
         corrida = {
@@ -48,12 +47,12 @@ class MotoristaDAO(MotoristaCLI):
 
     def criar_motorista(self):
         motorista_id = int(input("ID do motorista: "))
-        nome = input("Nome do motorista: ")
-        nota = int(input("Nota do motorista: "))
+        nome = input("Motorista: ")
+        nota = int(input("Nota: "))
 
         corridas = []
         while True:
-            adicionar_corrida = input("Você quer adicionar corridas? (s/n): ")
+            adicionar_corrida = input("Quer adicionar uma corrida? - S/N: ")
             if adicionar_corrida.lower() == 'n':
                 break
             corrida = self.criar_corrida()
@@ -62,7 +61,7 @@ class MotoristaDAO(MotoristaCLI):
         self.motorista_modelo.create_motorista(motorista_id, nome, corridas, nota)
 
     def ler_motorista(self):
-        motorista_id = int(input("Digite o ID do motorista: "))
+        motorista_id = int(input("ID do motorista: "))
         motorista = self.motorista_modelo.read_motorista(motorista_id)
         if motorista:
             print(f"Nome do Motorista: {motorista['nome']}")
@@ -86,7 +85,7 @@ class MotoristaDAO(MotoristaCLI):
 
         corridas = []
         while True:
-            adicionar_corrida = input("Você quer adicionar novas corridas? (s/n): ")
+            adicionar_corrida = input("Quer adicionar uma corrida? - S/N: ")
             if adicionar_corrida.lower() == 'n':
                 break
             corrida = self.criar_corrida()
@@ -99,6 +98,6 @@ class MotoristaDAO(MotoristaCLI):
         self.motorista_modelo.delete_motorista(motorista_id)
 
     def run(self):
-        print("Bem-vindo ao CLI de Motoristas!")
-        print("Comandos disponíveis: criar, ler, atualizar, deletar, sair")
+        print("Atividade Avaliativa")
+        print("Criar, ler, atualizar, deletar, sair")
         super().run()

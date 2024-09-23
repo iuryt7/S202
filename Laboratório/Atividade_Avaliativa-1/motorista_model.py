@@ -13,19 +13,19 @@ class motorista_model:
                 'corridas': corridas,
                 'nota': nota
             })
-            print("Motorista criado com sucesso!")
+            print("Motorista criado!")
             return res.inserted_id
         except Exception as e:
-            print("Motorista não foi criado. Erro: ", e)
+            print("Motorista não criado - Erro: ", e)
             return None
     
     def read_motorista(self, motorista_id):
         try:
             res = self.db.collection.find_one({'motorista_id': motorista_id})
-            print(f"Motorista encontrado com sucesso! { res}")
+            print(f"Motorista encontrado! {res}")
             return res
         except Exception as e:
-            print("Motorista não foi encontrado. Erro: ", e)
+            print("Motorista não encontrado - Erro: ", e)
             return None
         
     def update_motorista(self, motorista_id, nome, corridas, nota):
@@ -38,17 +38,17 @@ class motorista_model:
                     'nota': nota
                 }}
             )
-            print("Motorista atualizado com sucesso!")
+            print("Motorista atualizado!")
             return res.modified_count
         except Exception as e:
-            print("Motorista não foi atualizado. Erro: ", e)
+            print("Motorista não atualizado - Erro: ", e)
             return None
         
     def delete_motorista(self, motorista_id):
         try:
             res = self.db.collection.delete_one({'motorista_id': motorista_id})
-            print("Motorista deletado com sucesso!")
+            print("Motorista deletado!")
             return res.deleted_count
         except Exception as e:
-            print("Motorista não foi deletado. Erro: ", e)
+            print("Motorista não deletado - Erro: ", e)
             return None
