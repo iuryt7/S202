@@ -1,0 +1,7 @@
+    CREATE (peca1:Autopeca {nome: 'Parafuso', tipo: 'Ferramenta', valor: 10.00})
+    CREATE (peca2:Autopeca {nome: 'Bateria', tipo: 'Componente', valor: 150.00})
+    CREATE (peca3:Autopeca {nome: 'Filtro de Óleo', tipo: 'Componente', valor: 50.00})
+    CREATE (func1:Funcionario {nome: 'Carlos', cargo: 'Vendedor'})
+    CREATE (func2:Funcionario {nome: 'Ana', cargo: 'Estoquista'})
+    CREATE (cliente1:Cliente {nome: 'João', endereco: 'Rua A, 123'})
+    CREATE (cliente2:Cliente {nome: 'Maria', endereco: 'Rua B, 456'})
